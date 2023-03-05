@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  <title>Pintxo</title>
+
+  <style>
+  </style>
+</head>
+<body>
+
+  <div class="site-wrapper container container--small">
+
+    <header class="site-header">
+      <img class="site-logo" src="/assets/images/logo-pinxto-black.png" alt="pintxo logo">
+    </header>
+
+    <main>
+      <p>Véritable institution gastronomique à Montréal, le PINTXO comptoir à tapas propose au CENTRAL un élégant amalgame des trésors gustatifs d’Espagne. Un menu orienté vers des petits plats composés de Montaditos, des produits de la mer, tel que la morue sous toutes ses formes et des classiques de la cuisine espagnole dans le but de faire la promotion du partage des saveurs entre amis. Une carte des vins 100 % espagnole s’ajoute à l’immersion ibérique pour offrir une expérience complète des produits espagnols méconnus. Le tout servi autour d’un comptoir convivial rappelant l’inspiration des marchés publics d’Espagne. Une ambiance décontractée, festive et riche en saveur est ce que le PINTXO vous propose. Salud!</p>
+
+      <div class="opening-hours">
+        <h4>Heures d'ouverture</h4>
+        <div class="opening-hours__day">Lundi</div>
+        <div class="opening-hours__time">Fermé</div>
+        <div class="opening-hours__day">Mardi au Jeudi</div>
+        <div class="opening-hours__time">11h - 22h</div>
+        <div class="opening-hours__day">Vendredi-Samedi</div>
+        <div class="opening-hours__time">11h - 23h</div>
+        <div class="opening-hours__day">Dimanche</div>
+        <div class="opening-hours__time">12h - 20h</div>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    const DEBUG = true
+
+    // TURN OFF CONSOLE MESSAGES BY UNCOMMENTING THESE LINES
+    // https://stackoverflow.com/questions/1215392/how-to-quickly-and-conveniently-disable-all-console-log-statements-in-my-code
+    // console.error = function() {}
+    // console.info = function() {}
+    // console.log = function() {}
+    // console.warn = function() {}
+
+    let LOCALURL = 'pintxo.local'
+    if (window.location.href.indexOf(LOCALURL) > -1) {
+      DEBUG && console.log("readyState: " + document.readyState)
+      DEBUG && console.warn('Website is running locally through %c' + LOCALURL, 'font-weight:bold')
+      let tag = document.createElement('script');
+      tag.setAttribute('src', '/assets/js/live.js');
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+  </script>
+
+</body>
+</html>
